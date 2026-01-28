@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facebook</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background: #e9ebee;
+}
+
+.navbar{
+    background: #3b5998;
+    padding: 10px;
+}
+
+.navbar input{
+    height: 30px;
+    font-size: 14px;
+}
+
+.logo{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.left-text{
+    margin-top: 70px;
+}
+
+.signup-box{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.signup-box h2{
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-6">
+                <span class="logo">facebook</span>
+            </div>
+
+            <div class="col-md-3">
+                <label style="color:white">Email or Phone</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="col-md-3">
+                <label style="color:white">Password</label>
+                <input type="password" class="form-control">
+                <a href="#" style="color:#dcdcdc; font-size:12px;">Forgot account?</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 left-text">
+            <h3>Facebook helps you connect and share with the people in your life.</h3>
+            <img src="https://www.facebook.com/images/fb_icon_325x325.png" width="250">
+        </div>
+        <div class="col-md-6 mt-5">
+            <div class="signup-box">
+                <h2>Sign Up</h2>
+                <p>It's free and always will be.</p>
+
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                    </div><br>
+
+                    <input type="email" class="form-control" placeholder="Email Address"><br>
+                    <input type="email" class="form-control" placeholder="Re-enter Email"><br>
+                    <input type="password" class="form-control" placeholder="New Password"><br>
+
+                    <label>Birthday</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Month</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Day</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control">
+                                <option>Year</option>
+                            </select>
+                        </div>
+                    </div><br>
+
+                    <input type="radio" name="gender"> Female
+                    <input type="radio" name="gender"> Male
+                    <br><br>
+
+                    <button class="btn btn-success btn-lg">Sign Up</button>
+                </form>
+
+                <hr>
+                <a href="#">Create a Page</a> for a celebrity, band or business.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
