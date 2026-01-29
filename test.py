@@ -1188,44 +1188,165 @@
 
 
 
-# Base Class (Single Inheritance Base)
-class User:
-    def __init__(self, name):
-        self.name = name
+# # Base Class (Single Inheritance Base)
+# class User:
+#     def __init__(self, name):
+#         self.name = name
 
-    def login(self):
-        print(f"{self.name} logged in")
+#     def login(self):
+#         print(f"{self.name} logged in")
 
-# Hierarchical Inheritance (Multiple Children)
-class Student(User):
-    def __init__(self, name, course):
-        super().__init__(name)
-        self.course = course
+# # Hierarchical Inheritance (Multiple Children)
+# class Student(User):
+#     def __init__(self, name, course):
+#         super().__init__(name)
+#         self.course = course
 
-    def study(self):
-        print(f"{self.name} is studying {self.course}")
+#     def study(self):
+#         print(f"{self.name} is studying {self.course}")
 
-class Instructor(User):
-    def __init__(self, name, subject):
-        super().__init__(name)
-        self.subject = subject
+# class Instructor(User):
+#     def __init__(self, name, subject):
+#         super().__init__(name)
+#         self.subject = subject
 
-    def teach(self):
-        print(f"{self.name} is teaching {self.subject}")
+#     def teach(self):
+#         print(f"{self.name} is teaching {self.subject}")
 
-# Multiple Inheritance (Hybrid Part)
-class TeachingAssistant(Student, Instructor):
-    def __init__(self, name, course, subject):
-        Student.__init__(self, name, course)
-        Instructor.__init__(self, name, subject)
+# # Multiple Inheritance (Hybrid Part)
+# class TeachingAssistant(Student, Instructor):
+#     def __init__(self, name, course, subject):
+#         Student.__init__(self, name, course)
+#         Instructor.__init__(self, name, subject)
 
-    def assist(self):
-        print(f"{self.name} is assisting students and instructors")
+#     def assist(self):
+#         print(f"{self.name} is assisting students and instructors")
 
 
-ta = TeachingAssistant("Alex", "Python", "Programming")
+# ta = TeachingAssistant("Alex", "Python", "Programming")
 
-ta.login()      # from User
-ta.study()      # from Student
-ta.teach()      # from Instructor
-ta.assist()     # from TeachingAssistant
+# ta.login()      # from User
+# ta.study()      # from Student
+# ta.teach()      # from Instructor
+# ta.assist()     # from TeachingAssistant
+
+
+
+
+# # Method Overriding (Most Important)
+# class Animal:
+#     def sound(self):
+#         print("Animal makes sound")
+
+# class Dog(Animal):
+#     def sound(self):
+#         print("Dog barks")
+
+# class Cat(Animal):
+#     def sound(self):
+#         print("Cat meows")
+
+# # Objects
+# a = Animal()
+# d = Dog()
+# c = Cat()
+
+# a.sound()
+# d.sound()
+# c.sound()
+
+
+
+
+# # # Operator Polymorphism (Operator Overloading)
+# print(5 * 3)        # Addition
+# print("Hello " + "World")   # String join
+# print([1,2] * [3,4])   # List merge
+
+
+# # # Function Polymorphism (Built-in Functions)
+# print(len("Python"))
+# print(len([1,2,3,4]))
+# print(len({"a":1, "b":2}))
+
+
+# # # Custom Function Polymorphism
+# def add(a, b):
+#     return a + b
+
+# print(add(10, 20))
+# print(add("Hi ", "There"))
+# print(add([1,2], [3,4]))
+
+
+"""Operator Overloading means giving additional meaning to an operator depending on the operands (data types).
+
+Same operator
+ Different behavior
+Based on object or data type"""
+
+# class Student:
+#     def __init__(self, marks):
+#         self.marks = marks
+
+#     def __add__(self, other):
+#         print(other.marks)
+#         return self.marks + other.marks   
+
+# s1 = Student(80)
+# s2 = Student(90)
+# print(s2+s1 )
+
+
+"""In Python, true operator overloading is ONLY possible using magic methods (__add__, __sub__, etc).
+
+Without magic methods, you cannot change how operators like +, -, * work for custom objects."""
+
+
+
+
+# class Calc:
+#     # def __init__(self,num1,num2,num3):
+#     #     self.num1 = num1
+#     #     self.num2 = num2
+#     #     self.num3 = num3
+
+#     def add(self,num1,num2):
+#         return num1 + num2
+    
+#     def add(self,num1,num2,num3):
+#         return num1 + num2 + num3
+
+
+# c = Calc()
+# print(c.add(2,5,5))
+
+
+
+
+class Payment:
+    def __init__(self, amount):
+        self.amount = amount
+
+    def process_payment(self):
+        print("Processing generic payment")
+
+    def payment_receipt(self):
+        print(f"Payment of {self.amount} completed")
+
+
+class UPI(Payment):
+    def process_payment(self):
+        print(f"Processing UPI payment of {self.amount}")
+
+gpay = UPI(1000)
+gpay.process_payment() 
+
+
+
+class Card(Payment):
+    def process_payment(self):
+        super().process_payment()
+        print(f"Processing Card payment of {self.amount}")
+
+
