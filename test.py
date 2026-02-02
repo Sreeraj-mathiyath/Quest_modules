@@ -1324,29 +1324,84 @@ Without magic methods, you cannot change how operators like +, -, * work for cus
 
 
 
-class Payment:
-    def __init__(self, amount):
-        self.amount = amount
+# class Payment:
+#     def __init__(self, amount):
+#         self.amount = amount
 
-    def process_payment(self):
-        print("Processing generic payment")
+#     def process_payment(self):
+#         print("Processing generic payment")
 
-    def payment_receipt(self):
-        print(f"Payment of {self.amount} completed")
-
-
-class UPI(Payment):
-    def process_payment(self):
-        print(f"Processing UPI payment of {self.amount}")
-
-gpay = UPI(1000)
-gpay.process_payment() 
+#     def payment_receipt(self):
+#         print(f"Payment of {self.amount} completed")
 
 
+# class UPI(Payment):
+#     def process_payment(self):
+#         print(f"Processing UPI payment of {self.amount}")
 
-class Card(Payment):
-    def process_payment(self):
-        super().process_payment()
-        print(f"Processing Card payment of {self.amount}")
+# gpay = UPI(1000)
+# gpay.process_payment() 
 
 
+
+# class Card(Payment):
+#     def process_payment(self):
+#         super().process_payment()
+#         print(f"Processing Card payment of {self.amount}")
+
+
+# def addition(x, y):
+#     x = 4
+#     y = 8
+#     return x + y
+
+
+# num1 = 5
+# num2 = 10
+# print(num1, num2)
+# print(addition(num1, num2))  # Outputs: 15
+# print(num1, num2)
+
+
+# def get_list(list1):
+#     list1.append(6)
+#     print(list1)
+
+# numbers = [1,2,3,4,5]
+# get_list(numbers)
+# print(numbers)
+
+
+
+# def change_name(n):
+#     n = 'Sreeraj M R'
+#     print(f"changes value : {n}")
+
+# name = 'sreeraj'
+# change_name(name)
+# print(f"original value : {name}")
+
+
+# def change_list(nums):
+#     nums.append(7)
+#     nums.pop(1) 
+#     print(f"changed value : {nums}")
+
+# numbers = [1,2,3,4,5,6]
+# change_list(numbers.copy())
+# print(f"original value : {numbers}")
+
+
+
+
+
+def addition(x : int, y : int) -> int:
+    x = 4
+    y = 8
+    return x + y
+
+
+
+def get_list(list1 : list[int]) -> list[int]:
+    list1.append(7)
+    print(list1)
