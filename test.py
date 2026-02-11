@@ -1395,13 +1395,139 @@ Without magic methods, you cannot change how operators like +, -, * work for cus
 
 
 
-def addition(x : int, y : int) -> int:
-    x = 4
-    y = 8
-    return x + y
+# def addition(x : int, y : int) -> int:
+#     x = 4
+#     y = 8
+#     return x + y
 
 
 
-def get_list(list1 : list[int]) -> list[int]:
-    list1.append(7)
-    print(list1)
+# def get_list(list1 : list[int]) -> list[int]:
+#     list1.append(7)
+#     print(list1)
+
+
+
+# num1 = int(input("Enter first number:"))
+# num2 = int(input("Enter second number:"))
+
+# try:
+#     print(num1/num2)
+# except:
+#     print("not divisible by Zero")
+
+# print("check.................")
+
+# try:
+#     num = int("Hello")
+#     print(num)
+# except:
+#     print("Can't convert string to integer!")
+
+    
+# print('checking............')
+
+# num1 = 15
+# num2 = 10
+# print(num1 + num2)
+# print(num1 - num2)
+# print(num1 / num2)
+# print(num1 * num2)
+# print(num2 % num1)
+# print(num1 ** num2)
+# print(num1 // num2)
+
+# n1 = 10
+# n2 = 10
+
+# # print(n1 == n2)
+# # print(n1 != n2)
+# # print(n1 > n2)
+# # print(n1 >= n2)
+# print(n1 < n2)
+# print(n1 <= n
+
+
+# num1 = input("enter first number:")
+# num2 = input("enter second number:")
+
+# try:
+    
+#     print(num1 / num2)
+#     import unnamed
+# except ZeroDivisionError:
+#     print("not divisible by zero")
+# except ImportError:
+#     print("an import error occured")
+
+# except:
+#     print("something went wrong")
+
+# print("checking........")
+
+
+# try:
+# #     open('sample.txt')
+# # except FileNotFoundError as e:
+# #     print("file not found", e)
+# # else:
+# #     print("No exceptions found")
+# # finally:
+# #     print("it runs even error occured")
+
+
+
+# age = int(input("Enter your age:"))
+
+# print("Eligible for voting" if age >= 18 else "Not eligible")
+
+# if age >= 18:
+#     print("You are eligible for voting!")
+# else:
+#     print("You are not eligible for voting!") 
+
+
+# day = int(input("Enter a value between 1-7:"))
+
+# if day == 1:
+#     print("Monday")
+# elif day == 2:
+#     print("Tuesday")
+# elif day == 3:
+#     print("Wednesday")
+# elif day == 4:
+#     print("Thursday")
+# elif day == 5:
+#     print("friday")
+# elif day == 6:
+#     print("saturday")
+# elif day == 7:
+#     print("Sunday")
+# else:
+#     print("invalid input")
+
+
+# name = "Haifa"
+# age = 25
+
+# for char in name:
+#     print(char)
+
+
+# for num in range(101):
+#     print(num)
+
+
+# i = 0
+# while i <= 100:
+#     print(i)
+#     i += 3
+
+# 4.Print the following series:10, 20, 30 … 50
+# for i in range(10,101,10):
+#     print(i, end=" ")
+
+# x = 10
+# while x <= 100:
+#     print(x)
+#     x += 10

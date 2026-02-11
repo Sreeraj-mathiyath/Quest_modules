@@ -7,10 +7,11 @@
 
 
 #indentationError
-#     print("hello")
+    # print("hello")
 
 # for i in range(1,10):
 # print(i)
+
 
 #tab Error
 # def add():
@@ -26,8 +27,8 @@
 
 #Value error
 
-# num = int("Hello")
-# print(num)
+num = int("Hello")
+print(num)
 
 #type error
 # string ="quest"
@@ -54,6 +55,8 @@
 
 # #Importerror
 # import quest_module
+
+
 
 
 #=========================Exception Handling================================

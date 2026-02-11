@@ -824,28 +824,28 @@
 #     bank_name = "Safe Bank"       # Public: accessible everywhere
 
 #     def __init__(self, account_no, balance):
-#         self._account_no = account_no   # Protected: accessible in class and subclasses
-#         self.__balance = balance        # Private: accessible only inside class
+#         self.account_no = account_no   # Protected: accessible in class and subclasses
+#         self.balance = balance        # Private: accessible only inside class
 
 #     # Public method
 #     def deposit(self, amount):
 #         if amount > 0:
-#             self.__balance += amount
-#             print(f"Deposited ₹{amount}. New balance: ₹{self.__balance}")
+#             self.balance += amount
+#             print(f"Deposited ₹{amount}. New balance: ₹{self.balance}")
 #         else:
 #             print("Deposit amount must be positive.")
 
 #     # Public method
 #     def withdraw(self, amount):
-#         if amount <= self.__balance:
-#             self.__balance -= amount
-#             print(f"Withdrawn ₹{amount}. New balance: ₹{self.__balance}")
+#         if amount <= self.balance:
+#             self.balance -= amount
+#             print(f"Withdrawn ₹{amount}. New balance: ₹{self.balance}")
 #         else:
 #             print("Insufficient balance.")
 
 #     # Public method to access private variable
 #     def get_balance(self):
-#         return self.__balance
+#         return self.balance
 
 
 # acc = BankAccount(101, 5000)
@@ -955,3 +955,10 @@
 
 # atm = SBI_ATM()
 # atm.withdraw()
+
+
+# from bankclass import BankAccount
+
+# ac = BankAccount(102,300)
+# print(ac._account_no)
+# print(ac._BankAccount__balance)

@@ -129,12 +129,12 @@ greet="Hello World"
 
 
 # validation / checking
-string='python'
-u='HELLO WORLD'
-s='python-3.14'
-d='123456'
-w="     "
-print(ord('A'))
+# string='python'
+# u='HELLO WORLD'
+# s='python-3.14'
+# d='123456'
+# w="     "
+# print(ord('A'))
 # print(string.isdigit())
 # print(string.isalpha())
 # print(s.isdigit())
@@ -264,3 +264,13 @@ print(ord('A'))
 # "''"
 # '""'
 # chr 
+
+a = 10
+b = 20
+temp = a
+a = b
+b = temp
+# a, b = b, a
+# print("a",a," b",b)
+
+
